@@ -12,7 +12,7 @@ export default defineConfig({
     //压缩
     //minify: false,
     rollupOptions: {
-      //忽略打包vue文件
+      //忽略不需要打包的文件
       external: ['vue', /\.less/, '@easyest/utils'],
       input: ['index.ts'],
       output: [
