@@ -1,11 +1,5 @@
-###
- # @Description: 
- # @Date: 2023-05-24 10:19:05
- # @Author: didi
- # @LastEditTime: 2023-05-24 11:26:18
-### 
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
+npx --no -- commitlint --edit "$1"
 pnpm run lint:script
 pnpm run lint:style
