@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2023-02-09 14:28:42
  * @Author: didi
- * @LastEditTime: 2023-05-24 10:25:29
+ * @LastEditTime: 2023-05-24 11:29:22
 -->
 <template>
   <div>
@@ -12,6 +12,4 @@
 </template>
 <script lang="ts" setup>
 import { Button } from '@easyest/components';
-
-const a = '1';
 </script>
