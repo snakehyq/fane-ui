@@ -13,5 +13,5 @@
 <script lang="ts" setup>
 import { Button } from '@easyest/components';
 
-const a = "1";
+const a = '1';
 </script>
