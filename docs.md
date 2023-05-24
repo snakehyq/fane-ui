@@ -92,15 +92,21 @@ module.exports = {
 };
 ```
 
-然后在.husky/pre-commit 中添加`npx --no -- commitlint --edit "$1"`
+然后在.husky/commit-msg 中添加`npx --no -- commitlint --edit "$1"`
 
 ```
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
 npx --no -- commitlint --edit "$1"
-pnpm run lint:script
-pnpm run lint:style
 ```
 
 然后提交一个不符合规范的 type,就会发现报错了
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad825a353a404664aec3d1393370e842~tplv-k3u1fbpfcp-watermark.image?)
+
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e00a5bca95a443291bb78a4c0fbce36~tplv-k3u1fbpfcp-watermark.image?)
+
+正确提交方式应为`<type>(<?scope>): <subject>`,例如
+
+```
+feat(global): 添加commitlint规范
+```
