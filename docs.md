@@ -48,7 +48,7 @@ pnpm run lint:script
 pnpm run lint:style
 ```
 
-修改一个不符合 eslint 的规范文件,然后进行提交之后你会发现它会自动给你修复之后再进行提交
+修改一个不符合 eslint 的规范文件,然后进行提交之后你会发现它会先自动给你修复之后再进行提交,如果无法修复则抛出一个错误
 
 ## commitlint 的安装与使用
 
