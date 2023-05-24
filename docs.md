@@ -110,3 +110,40 @@ npx --no -- commitlint --edit "$1"
 ```
 feat(global): 添加commitlint规范
 ```
+
+## 配置 lint-staged
+
+我们根据上面的配置是可以实现我们想要的效果的,但是我们会发现每次提交代码的时候 ESlint 或 Stylelint 都会检查所有文件,而我们需要的是只让它们检测新增的文件,因此我们可以使用`lint-staged`来解决这个问题
+
+首先安装`lint-staged`
+
+```
+pnpm add lint-staged -D -w
+```
+
+然后再 package.json 中进行配置
+
+```js
+{
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+      "stylelint --fix \"packages/components/src/**/*.{css,less}\""
+    ]
+  },
+    "scripts": {
+    "lint-staged": "lint-staged"
+  },
+}
+```
+
+最后修改一下``.husky/pre-commit
+
+```
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+pnpm run lint-staged
+
+```
+
+ok,现在它只会检测我们添加到暂存区的文件了

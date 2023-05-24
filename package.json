@@ -4,6 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+      "stylelint --fix \"packages/components/src/**/*.{css,less}\""
+    ]
+  },
   "scripts": {
     "build:easyest": "gulp -f packages/components/script/build/index.ts & pnpm run --filter ./packages/utils build",
     "publish:easyest": "gulp -f packages/components/script/publish/index.ts",
@@ -14,7 +20,8 @@
     "easyest:dev": "pnpm run --filter ./play dev",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
     "lint:style": "stylelint --fix \"packages/components/src/**/*.{css,less}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "",
