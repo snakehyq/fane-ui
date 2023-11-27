@@ -11,5 +11,5 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { Button } from '@easyest/components';
+import { Button } from '@fane-ui/components';
 </script>

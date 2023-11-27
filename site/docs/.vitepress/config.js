@@ -1,6 +1,6 @@
 export default {
-  title: 'Easyest',
-  base: process.env.NODE_ENV === 'production' ? '/easyest/' : '/',
+  title: 'fane-ui',
+  base: process.env.NODE_ENV === 'production' ? '/fane-ui/' : '/',
   themeConfig: {
     nav: [{ text: '文档', link: '/guild/introduce' }],
     sidebar: {
@@ -43,6 +43,6 @@ export default {
       ]
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/qddidi/easyest' }]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/qddidi/fane-ui' }]
   }
 };

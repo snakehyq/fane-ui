@@ -13,7 +13,7 @@ export default defineConfig({
     //minify: false,
     rollupOptions: {
       //忽略不需要打包的文件
-      external: ['vue', /\.less/, '@easyest/utils'],
+      external: ['vue', /\.less/, '@fane-ui/utils'],
       input: ['index.ts'],
       output: [
         {
@@ -25,7 +25,7 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: '../easyest/es'
+          dir: '../fane-ui/es'
         },
         {
           //打包格式
@@ -36,20 +36,20 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: '../easyest/lib'
+          dir: '../fane-ui/lib'
         }
       ]
     },
     lib: {
       entry: './index.ts',
-      name: 'easyest'
+      name: 'fane-ui'
     }
   },
   plugins: [
     vue(),
     dts({
       entryRoot: 'src',
-      outputDir: ['../easyest/es/src', '../easyest/lib/src'],
+      outputDir: ['../fane-ui/es/src', '../fane-ui/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
     }),

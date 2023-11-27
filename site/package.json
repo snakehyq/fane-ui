@@ -18,7 +18,7 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@easyest/components": "workspace:^1.0.0",
-    "easyest": "workspace:^1.0.4"
+    "@fane-ui/components": "workspace:^1.0.0",
+    "fane-ui": "workspace:^1.0.4"
   }
 }

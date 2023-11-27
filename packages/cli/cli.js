@@ -16,7 +16,7 @@ const optionDefinitions = [
 //帮助命令
 const helpSections = [
   {
-    header: 'create-easyest',
+    header: 'create-fane-ui',
     content: '一个快速生成组件库搭建环境的脚手架'
   },
   {
@@ -49,7 +49,7 @@ const promptsOptions = [
     message: '请选择一个模板',
     choices: [
       { title: 'kitty-ui', value: 1 },
-      { title: 'easyest', value: 2 }
+      { title: 'fane-ui', value: 2 }
     ]
   }
 ];
@@ -57,7 +57,7 @@ const options = commandLineArgs(optionDefinitions);
 
 const remoteList = {
   1: 'https://gitee.com/geeksdidi/kittyui.git',
-  2: 'https://github.com/qddidi/easyest.git'
+  2: 'https://github.com/qddidi/fane-ui.git'
 };
 const getUserInfo = async () => {
   const res = await prompts(promptsOptions);

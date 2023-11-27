@@ -1,5 +1,5 @@
 {
-  "name": "easyest",
+  "name": "fane-ui",
   "version": "1.0.7",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -8,21 +8,21 @@
     "lib"
   ],
   "keywords": [
-    "easyest",
+    "fane-ui",
     "vue3组件库"
   ],
   "sideEffects": [
     "**/*.css"
   ],
-  "author": "小月",
+  "author": "小强",
   "license": "MIT",
   "description": "",
   "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qddidi/easyest"
+    "url": "https://github.com/snakehyq/fane-ui"
   },
   "dependencies": {
-    "@easyest/utils": "^1.0.2"
+    "@fane-ui/utils": "^1.0.2"
   }
 }

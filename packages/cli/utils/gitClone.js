@@ -15,8 +15,8 @@ export default (remote, name, option) => {
       downSpinner.succeed(chalk.green('模板下载成功！'));
       console.log(chalk.green(`cd ${name}\r\n`));
       console.log(chalk.blue('pnpm install\r\n'));
-      console.log('pnpm run build:easyest\r\n');
-      console.log('pnpm run easyest:dev\r\n');
+      console.log('pnpm run build:fane-ui\r\n');
+      console.log('pnpm run fane-ui:dev\r\n');
       resolve();
     });
   });
