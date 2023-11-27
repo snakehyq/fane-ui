@@ -67,5 +67,8 @@
     "vite-plugin-dts": "^1.4.1",
     "vitest": "^0.29.2",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "lint-staged": "^15.1.0"
   }
 }
